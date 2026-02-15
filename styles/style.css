@@ -1,0 +1,151 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #555555, #d3d3d3);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* header & nav_data */
+.header {
+  padding: 16px 44px;
+}
+
+.nav_data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav_logo h1 {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.nav_data .nav_logo img {
+  height: 60px;
+  width: 78px;
+}
+
+.nav_toggle {
+  color: white;
+  display: none;
+}
+
+/* nav_list */
+.nav_list {
+  display: flex;
+  gap: 38px;
+  padding: 10px 20px;
+  background-color: rgba(128, 128, 128, 0.077);
+  position: relative;
+}
+
+.nav_list li {
+  position: relative;
+  font-size: 18px;
+}
+
+.nav_link {
+  color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav_link:hover {
+  background-color: #4a90e2;
+  border-radius: 2px;
+}
+
+/* Dropdown menus */
+.dropdown_item > .dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.307);
+  min-width: 180px;
+  padding: 10px 0;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none; /*The element ignores all mouse actions when opacity is 0 its still acting on hover */
+  z-index: 999;
+}
+
+.dropdown_item:hover > .dropdown_menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dropdown subitems */
+.dropdown_subitem {
+  position: relative;
+}
+
+.dropdown_subitem > .dropdown_submenu {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  min-width: 160px;
+  padding: 10px 0;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropdown_subitem:hover > .dropdown_submenu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dropdown links */
+.dropdown_link,
+.dropdown__subLink {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dropdown_link:hover,
+.dropdown__subLink:hover {
+  background-color: #4a90e2;
+}
+
+.dropdown__arrow,
+.dropdown__add {
+  font-size: 0.8rem;
+}
+
+.nav_list li a {
+  font-size: 18px;
+}
