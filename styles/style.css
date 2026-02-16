@@ -27,6 +27,13 @@ a {
   padding: 16px 44px;
 }
 
+.underline {
+  height: 1px;
+  width: calc(100% + 44px);
+  background-color: white;
+  margin-bottom: 5px;
+}
+
 .nav_data {
   display: flex;
   justify-content: space-between;
