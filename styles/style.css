@@ -51,7 +51,28 @@ a {
 
 .nav_toggle {
   color: white;
-  display: none;
+  opacity: 0;
+  position: relative;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav_burger,
+.nav_close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition:
+    opacity 0.1s,
+    transform 0.4s;
 }
 
 /* nav_list */
@@ -188,7 +209,7 @@ a {
 
   .nav_toggle {
     color: white;
-    display: flex;
+    opacity: 1;
   }
 
   /* show menu */
@@ -238,10 +259,8 @@ a {
   /* show icon */
   .show-icon .nav_burger {
     opacity: 0;
-    transform: rotate(90deg);
   }
   .show-icon .nav_close {
     opacity: 1;
-    transform: rotate(90deg);
   }
 }
